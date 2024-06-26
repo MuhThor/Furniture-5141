@@ -6,10 +6,12 @@
     // Retrieve the product ID from the query string
     $idproduct = isset($_GET['id_product']) ? intval($_GET['id_product']) : 0;
 
+    $db = new createDb("dbmebel", "product");
+
     // Fetch product details based on the product ID
     $product = null;
     if ($idproduct > 0) {
-        $result = $database->getProductById($idproduct);
+        $result = $db->getProductById($idproduct);
         if ($result !== false) {
             $product = $result->fetch_assoc();
         }

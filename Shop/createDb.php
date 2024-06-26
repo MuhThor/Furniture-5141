@@ -11,7 +11,7 @@ class createDb {
 
     // Constructor
     public function __construct(
-        $dbname = "dbMebel",
+        $dbname = "dbmebel",
         $tablename = "Producttable",
         $servername = "localhost",
         $username = "root",
@@ -72,7 +72,7 @@ class createDb {
     }
 
     public function getProductById($idproduct) {
-        $sql = "SELECT * FROM product WHERE id_product = $idproduct";
+        $sql = "SELECT * FROM product WHERE id_product = ?";
         $stmt = $this->conn->prepare($sql);
         if ($stmt) {
             $stmt->bind_param("i", $idproduct);
