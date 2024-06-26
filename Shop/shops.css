@@ -1,0 +1,205 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif, 'Inter';
+}
+
+body{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif, "Inter";
+    background-color: #fff;
+}
+
+.header {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    color: #E4C59E;
+    padding: 10px;
+}
+
+.logo {
+    float: left;
+}
+
+.user-links {
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+}
+
+.user-links a {
+    color: #333;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+.search-bar {
+    text-align: center;
+    position: flex;
+}
+
+.search-bar input[type="text"] {
+    width: 600px; /* Lebar input searchbar */
+    padding: 10px; /* Padding di dalam input */
+    border: 2px solid #E4C59E; /* Menambahkan border dengan warna #E4C59E */
+    border-radius: 10px; /* Untuk membuat sudut input menjadi melengkung */
+    outline: none; /* Menghilangkan outline saat input aktif */
+}
+
+.col1{
+    text-align: center;
+    padding: 20px;
+    background-color: #E4C59E;
+    opacity: 100%;
+}
+
+.col1 a{
+    margin-left: 20px;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.col1 a:hover{
+    background-color: #f0f0f0;
+}
+
+
+.container{
+    display: flex;
+}
+
+.sidebar{
+    width: 20%;
+    padding: 20px;
+    background-color: #fff;
+}
+
+h2 {
+    font-size: 18px;
+    color: black;
+    border-bottom: 10px;
+}
+
+.category-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 30px 0;         /* margin bawah utk memisahkan antar kategori */
+}
+
+.category-item {
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;      /* membuat garis di katogori item */
+    color: #555;
+    cursor: pointer;
+}
+
+.category-item:hover, 
+.category-item.active {
+    color: #803D3B ;
+    font-weight: bold;
+}
+
+.product-list {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.product-item {
+    width: 23%;
+    margin: 1%;
+    padding: 15px;
+    box-shadow:  0 2px 5px rgba(62, 62, 62, 0.1);
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.product-item img {
+    width: 80%;
+    height: auto;
+    cursor: pointer;
+}
+
+.product-item h3 {
+    font-size: 16px;
+    color: #333 ;
+    margin: 10px 0 5px 0;
+    cursor: pointer;
+}
+
+.product-item p {
+    color: #999;
+    font-size: 14px;
+    margin: 0;
+}
+.footer {
+    background-color: #FFF8EF;
+    color: #333;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.footer-left {
+    flex: 1;
+}
+
+.footer-left p{
+    color: #9B9B9B;
+}
+
+.footer-logo img {
+    width: 170px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.footer-center,
+.footer-right {
+    flex: 1;
+}
+
+.useful-links,
+.idea-advice,
+.payment-methods {
+    align-self: flex-start;
+    margin-top: 90px;
+    margin-left: 50px;
+}
+
+.useful-links,
+.idea-advice{
+    display: inline-block;
+    margin-right: 30px;
+
+}
+
+.useful-links a,
+.idea-advice a {
+    margin-top: 20px;
+    color: #9B9B9B;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.payment-methods {
+    margin-top: 90px;
+}
+
+.payment-methods img {
+    width: 200px;
+    margin-right: 10px;
+}
