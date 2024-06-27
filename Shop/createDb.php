@@ -11,8 +11,8 @@ class createDb {
 
     // Constructor
     public function __construct(
-        $dbname = "Newdb",
-        $tablename = "Productdb",
+        $dbname = "dbmebel",
+        $tablename = "Producttable",
         $servername = "localhost",
         $username = "root",
         $password = ""
@@ -46,6 +46,7 @@ class createDb {
                 color varchar(100),
                 price float,
                 quantity int,
+                desk varchar(100),
                 image varchar(255)
             );";
 
@@ -68,6 +69,17 @@ class createDb {
         if(mysqli_num_rows($result) > 0){
             return $result;
         }
+    }
+
+    public function getProductById($idproduct) {
+        $sql = "SELECT * FROM product WHERE id_product = ?";
+        $stmt = $this->conn->prepare($sql);
+        if ($stmt) {
+            $stmt->bind_param("i", $idproduct);
+            $stmt->execute();
+            return $stmt->get_result();
+        }
+        return false;
     }
     
 }

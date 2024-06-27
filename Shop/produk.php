@@ -6,7 +6,7 @@
     // Retrieve the product ID from the query string
     $idproduct = isset($_GET['id_product']) ? intval($_GET['id_product']) : 0;
 
-    $db = new createDb("dbmebel", "product");
+    $database = new createDb("dbmebel", "product");
 
     // Fetch product details based on the product ID
     $product = null;
@@ -75,6 +75,7 @@
     <?php else: ?>
         <p>Product not found!</p>
     <?php endif; ?>
+    
 </div>
 
 <script>
